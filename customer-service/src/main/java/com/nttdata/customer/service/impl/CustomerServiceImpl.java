@@ -14,6 +14,11 @@ public class CustomerServiceImpl implements ICustomerService {
     private final ICustomerRepository repository;
 
     @Override
+    public Mono<Customer> findByDocumentNumber(String documentNumber) {
+        return repository.findByDocumentNumber(documentNumber);
+    }
+
+    @Override
     public Mono<Customer> findById(String id) {
         return repository.findById(id);
     }

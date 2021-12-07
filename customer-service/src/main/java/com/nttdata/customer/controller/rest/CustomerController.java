@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/customer")
+@RequestMapping("/customerv2")
 @RequiredArgsConstructor
 public class CustomerController {
 
