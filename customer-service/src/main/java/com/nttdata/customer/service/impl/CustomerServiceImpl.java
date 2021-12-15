@@ -29,11 +29,6 @@ public class CustomerServiceImpl implements ICustomerService {
     }
 
     @Override
-    public Mono<Customer> findByCustomerIdNumber(String customerIdNumber) {
-        return repository.findByCustomerIdNumber(customerIdNumber);
-    }
-
-    @Override
     public Mono<Customer> save(Customer customer) {
         return repository.save(customer);
     }

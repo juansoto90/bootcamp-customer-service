@@ -7,6 +7,5 @@ public interface ICustomerService {
     Mono<Customer> findByDocumentNumber(String documentNumber);
     Mono<Customer> findById(String id);
     Mono<Customer> findByName(String name);
-    Mono<Customer> findByCustomerIdNumber(String customerIdNumber);
     Mono<Customer> save(Customer customer);
 }

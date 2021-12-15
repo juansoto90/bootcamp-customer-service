@@ -16,7 +16,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Customer {
     @Id
     private String id;
-    private String customerIdNumber;
     private String customerType;
     private String documentType;
     private String documentNumber;

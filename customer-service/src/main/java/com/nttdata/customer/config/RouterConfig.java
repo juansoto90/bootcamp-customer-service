@@ -13,6 +13,8 @@ public class RouterConfig {
     @Bean
     public RouterFunction<ServerResponse> routes(CustomerHandler handler){
         return route(GET("/customer/{id}"), handler::findById)
+                .andRoute(GET("/customer/circuit/{id}"), handler::findByIdCircuitBreaker)
+                .andRoute(GET("/customer/message/{id}"), handler::messageErrorFallBack)
                 .andRoute(GET("/customer/document-number/{documentNumber}"), handler::findByDocumentNumber)
                 .andRoute(POST("/customer"), handler::create);
     }
